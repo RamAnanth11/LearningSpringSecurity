@@ -1,4 +1,4 @@
-package com.practice.practice.controllers;
+package com.spring.security.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,4 +9,5 @@ public class IndexController {
 	public String getIndex() {
 		return "Index Controller";
 	}
+	
 }
