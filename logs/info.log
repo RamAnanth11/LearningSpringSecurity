@@ -1,10 +1,5 @@
-2024-07-18 17:50:07 - Spring Boot Basics
-2024-07-18 17:50:07 - Advanced Spring Security
-2024-07-18 17:50:07 - RESTful Web Services
-2024-07-18 17:50:07 - Microservices
-2024-07-18 17:50:07 - Spring Data JPA
-2024-07-18 17:51:56 - Spring Boot Basics
-2024-07-18 17:51:56 - Advanced Spring Security
-2024-07-18 17:51:56 - RESTful Web Services
-2024-07-18 17:51:56 - Microservices
-2024-07-18 17:51:56 - Spring Data JPA
+{"@timestamp":"2024-07-18T12:47:15.464Z","timestamp":"2024-07-18T18:17:15.464Z","level":"INFO","thread":"http-nio-8898-exec-3","logger":"com.spring.security.services.CSVService","message":"Spring Boot Basics","context":"","exception":""}
+{"@timestamp":"2024-07-18T12:47:15.464Z","timestamp":"2024-07-18T18:17:15.464Z","level":"INFO","thread":"http-nio-8898-exec-3","logger":"com.spring.security.services.CSVService","message":"Advanced Spring Security","context":"","exception":""}
+{"@timestamp":"2024-07-18T12:47:15.464Z","timestamp":"2024-07-18T18:17:15.464Z","level":"INFO","thread":"http-nio-8898-exec-3","logger":"com.spring.security.services.CSVService","message":"RESTful Web Services","context":"","exception":""}
+{"@timestamp":"2024-07-18T12:47:15.464Z","timestamp":"2024-07-18T18:17:15.464Z","level":"INFO","thread":"http-nio-8898-exec-3","logger":"com.spring.security.services.CSVService","message":"Microservices","context":"","exception":""}
+{"@timestamp":"2024-07-18T12:47:15.464Z","timestamp":"2024-07-18T18:17:15.464Z","level":"INFO","thread":"http-nio-8898-exec-3","logger":"com.spring.security.services.CSVService","message":"Spring Data JPA","context":"","exception":""}

@@ -1,5 +1,6 @@
 package com.spring.security.entities;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -18,7 +19,12 @@ import jakarta.persistence.Table;
 
 @Table(name = "users")
 @Entity
-public class User implements UserDetails {
+public class User implements UserDetails, Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(nullable = false)

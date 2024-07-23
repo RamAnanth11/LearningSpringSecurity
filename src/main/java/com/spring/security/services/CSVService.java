@@ -25,7 +25,6 @@ public class CSVService {
 			List<Tutorial> tutorials = CSVHelper.csvToTutorials(file.getInputStream());
 			for (Tutorial tutorial : tutorials) {
 				logger.info(tutorial.getTitle());
-				System.out.println(tutorial.getTitle());
 			}
 
 			repository.saveAll(tutorials);

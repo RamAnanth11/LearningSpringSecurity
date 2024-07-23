@@ -1,7 +1,5 @@
 package com.spring.security.dtos;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 public class RegisterUserDto {
     private String email;
     

@@ -30,7 +30,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
 		<dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
@@ -70,11 +75,22 @@
 			<version>1.8</version>
 		</dependency>
 		<!-- FILE UPLOAD END -->
+		<!-- SWAGGER DEPENDENCY STARTS-->
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 			<version>2.5.0</version>
 		</dependency>
+		<!-- SWAGGER DEPENDENCY ENDS-->
+		<!-- STRUCTURED LOGGER DEPENDENCY STARTS-->
+		<!-- 
+		<dependency>
+			<groupId>net.logstash.logback</groupId>
+			<artifactId>logstash-logback-encoder</artifactId>
+			<version>7.2</version>
+		</dependency>
+		-->
+		<!-- STRUCTURED LOGGER DEPENDENCY ENDS	-->
 
 	</dependencies>
 	<build>
