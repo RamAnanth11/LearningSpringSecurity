@@ -28,44 +28,38 @@ public class SecurityConfiguration {
 
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.csrf()
-                .disable()
-                .authorizeHttpRequests()
-                .requestMatchers(
-                		"/auth/**",
-                		"/v3/api-docs/**",
-                        "/swagger-ui/**",
-                        "/swagger-ui.html",
-                		"/resource-server/**")
-                .permitAll()
-                .anyRequest()
-                .authenticated()
-                .and()
-                .sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
-                .authenticationProvider(authenticationProvider)
-                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
-        return http.build();
+		http.csrf(csrf -> csrf.disable())
+				.authorizeHttpRequests(
+						authorize -> authorize.requestMatchers("/auth/**", "/v3/api-docs/**", "/swagger-ui/**",
+								"/swagger-ui.html", "/resource-server/**").permitAll().anyRequest().authenticated())
+				.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+				.authenticationProvider(authenticationProvider)
+				.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
+		return http.build();
 	}
 
 //	@Bean
-//    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-//        http
-//            .securityMatchers((matchers) -> matchers
-//                .requestMatchers("/auth/**",
-//                		"/v3/api-docs/**",
-//                        "/swagger-ui/**",
-//                        "/swagger-ui.html",
-//                		"/resource-server/**")
-//            )
-//            .authorizeHttpRequests((authorize) -> authorize
-//                .anyRequest().hasRole("USER")
-//            )
-//            .httpBasic(Customizer.withDefaults());
-//        return http.build();
-//    }
-	
+//	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+//	    http
+//	        .csrf(csrf -> csrf.disable())
+//	        .authorizeHttpRequests(authorize -> authorize
+//	            .requestMatchers(
+//	                "/auth/**",
+//	                "/v3/api-docs/**",
+//	                "/swagger-ui/**",
+//	                "/swagger-ui.html",
+//	                "/resource-server/**"
+//	            ).permitAll()
+//	            .anyRequest().authenticated()
+//	        )
+//	        .sessionManagement(session -> session
+//	            .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+//	        )
+//	        .authenticationProvider(authenticationProvider)
+//	        .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
+//	    return http.build();
+//	}
+
 	@Bean
 	CorsConfigurationSource corsConfigurationSource() {
 		CorsConfiguration configuration = new CorsConfiguration();
