@@ -37,7 +37,11 @@ public class SecurityConfiguration {
 				.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 		return http.build();
 	}
+
 //	This is added in line number 40, in Eclipse
+
+//	This line is added in line number 40 to test
+
 //	@Bean
 //	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 //	    http
